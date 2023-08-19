@@ -1,0 +1,25 @@
+[project]
+name = "starter"
+version = "0.0.0"
+description = "A starter python module"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  {name = "Alfi Maulana", email = "alfi.maulana.f@gmail.com"}
+]
+keywords = ["python", "starter"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: The Unlicense (Unlicense)",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.urls]
+repository = "https://github.com/threeal/python-starter"
+
+[tool.setuptools.packages.find]
+where = ["src"]
