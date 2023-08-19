@@ -13,3 +13,6 @@ jobs:
 
       - name: Install deps
         run: make install
+
+      - name: Run module
+        run: .venv/bin/python -m starter 10
