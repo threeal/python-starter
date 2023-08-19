@@ -11,4 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
 
-      # Do something to build the project
+      - name: Install deps
+        run: |
+          python -m venv .venv --upgrade --upgrade-deps
+          .venv/bin/pip install -e .
