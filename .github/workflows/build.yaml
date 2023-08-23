@@ -11,4 +11,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
 
-      # Do something to build the project
+      - name: Install deps
+        run: make install
+
+      - name: Run module
+        run: .venv/bin/python -m starter 10
