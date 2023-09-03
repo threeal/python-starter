@@ -27,3 +27,6 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
+
+[tool.poetry.scripts]
+starter = "starter.__main__:main"
