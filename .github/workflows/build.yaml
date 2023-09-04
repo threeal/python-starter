@@ -28,6 +28,7 @@ jobs:
 
       - name: Check format
         run: |
+          poetry run isort lib
           poetry run black lib
           git diff --exit-code HEAD
 
