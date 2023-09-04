@@ -1,13 +1,17 @@
-[project]
+[build-system]
+requires = ["poetry-core >= 1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
 name = "starter"
 version = "0.0.0"
 description = "A starter python module"
-readme = "README.md"
-requires-python = ">=3.10"
-license = { file = "LICENSE" }
+license = "Unlicense"
 authors = [
-  {name = "Alfi Maulana", email = "alfi.maulana.f@gmail.com"}
+    "Alfi Maulana <alfi.maulana.f@gmail.com>",
 ]
+readme = "README.md"
+repository = "https://github.com/threeal/python-starter"
 keywords = ["python", "starter"]
 classifiers = [
   "Development Status :: 1 - Planning",
@@ -17,9 +21,12 @@ classifiers = [
   "Programming Language :: Python :: 3 :: Only",
   "Topic :: Software Development :: Libraries :: Python Modules"
 ]
+packages = [
+    { include = "starter", from = "src" }
+]
 
-[project.urls]
-repository = "https://github.com/threeal/python-starter"
+[tool.poetry.dependencies]
+python = "^3.10"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.poetry.scripts]
+starter = "starter.__main__:main"
