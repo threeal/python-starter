@@ -22,7 +22,7 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 packages = [
-    { include = "starter", from = "src" }
+    { include = "starter", from = "lib" }
 ]
 
 [tool.poetry.dependencies]

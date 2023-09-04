@@ -28,7 +28,7 @@ jobs:
 
       - name: Check format
         run: |
-          poetry run black src
+          poetry run black lib
           git diff --exit-code HEAD
 
       - name: Run module
