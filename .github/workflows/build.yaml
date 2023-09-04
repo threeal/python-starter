@@ -24,7 +24,12 @@ jobs:
         uses: abatilo/actions-poetry@v2.3.0
 
       - name: Install deps
-        run: poetry install
+        run: poetry install --with dev
+
+      - name: Check format
+        run: |
+          poetry run black src
+          git diff --exit-code HEAD
 
       - name: Run module
         run: poetry run starter 10
