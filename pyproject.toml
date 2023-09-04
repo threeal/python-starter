@@ -28,5 +28,11 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.10"
 
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+
 [tool.poetry.scripts]
 starter = "starter.__main__:main"
