@@ -1,4 +1,5 @@
 import sys
+
 from . import fibonacci_series
 
 
