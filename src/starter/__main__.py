@@ -1,6 +1,11 @@
 import sys
 from . import fibonacci_series
 
-if __name__ == "__main__":
+
+def main():
     series = fibonacci_series(int(sys.argv[1]))
     print(" ".join(str(item) for item in series))
+
+
+if __name__ == "__main__":
+    main()

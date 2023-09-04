@@ -11,8 +11,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.6.0
 
+      - name: Setup Poetry
+        uses: abatilo/actions-poetry@v2.3.0
+
       - name: Install deps
-        run: make install
+        run: poetry install
 
       - name: Run module
-        run: .venv/bin/python -m starter 10
+        run: poetry run starter 10
