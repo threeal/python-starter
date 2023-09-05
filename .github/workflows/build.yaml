@@ -20,12 +20,19 @@ jobs:
         with:
           python-version: 3.11
 
+      - name: Get pipx variables
+        id: pipx_vars
+        shell: bash
+        run: |
+          echo "bin_dir=$(pipx environment -v PIPX_BIN_DIR)" >> $GITHUB_OUTPUT
+          echo "local_venvs=$(pipx environment -v PIPX_LOCAL_VENVS)" >> $GITHUB_OUTPUT
+
       - name: Cache Poetry
         uses: actions/cache@v3.3.1
         with:
           path: |
-            ~/.local/bin/poetry
-            ~/.local/pipx/venvs/poetry
+            ${{ steps.pipx_vars.outputs.bin_dir }}/poetry*
+            ${{ steps.pipx_vars.outputs.local_venvs }}/poetry
           key: poetry-${{ runner.os }}-${{ hashFiles('.github/workflows/build.yaml') }}
 
       - name: Setup Poetry
