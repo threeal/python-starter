@@ -20,6 +20,14 @@ jobs:
         with:
           python-version: 3.11
 
+      - name: Cache Poetry
+        uses: actions/cache@v3.3.1
+        with:
+          path: |
+            ~/.local/bin/poetry
+            ~/.local/pipx/venvs/poetry
+          key: poetry-${{ runner.os }}-${{ hashFiles('.github/workflows/build.yaml') }}
+
       - name: Setup Poetry
         run: pipx install poetry
 
