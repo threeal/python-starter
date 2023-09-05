@@ -32,5 +32,8 @@ jobs:
           poetry run black lib
           git diff --exit-code HEAD
 
+      - name: Check lint
+        run: poetry run flake8 lib
+
       - name: Run module
         run: poetry run starter 10
