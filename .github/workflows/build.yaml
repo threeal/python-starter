@@ -21,7 +21,7 @@ jobs:
           python-version: 3.11
 
       - name: Setup Poetry
-        uses: abatilo/actions-poetry@v2.3.0
+        run: pipx install poetry
 
       - name: Install deps
         run: poetry install --with dev
