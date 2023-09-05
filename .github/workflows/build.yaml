@@ -28,6 +28,7 @@ jobs:
           echo "local_venvs=$(pipx environment -v PIPX_LOCAL_VENVS)" >> $GITHUB_OUTPUT
 
       - name: Cache Poetry
+        id: cache_poetry
         uses: actions/cache@v3.3.1
         with:
           path: |
@@ -36,6 +37,7 @@ jobs:
           key: poetry-${{ runner.os }}-${{ hashFiles('.github/workflows/build.yaml') }}
 
       - name: Setup Poetry
+        if: steps.cache_poetry.outputs.cache-hit != 'true'
         run: pipx install poetry
 
       - name: Install deps
