@@ -20,26 +20,8 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Get pipx variables
-        id: pipx_vars
-        shell: bash
-        run: |
-          echo "version=$(pipx --version)" >> $GITHUB_OUTPUT
-          echo "bin_dir=$(pipx environment -v PIPX_BIN_DIR)" >> $GITHUB_OUTPUT
-          echo "local_venvs=$(pipx environment -v PIPX_LOCAL_VENVS)" >> $GITHUB_OUTPUT
-
-      - name: Cache Poetry
-        id: cache_poetry
-        uses: actions/cache@v3.3.2
-        with:
-          path: |
-            ${{ steps.pipx_vars.outputs.bin_dir }}/poetry*
-            ${{ steps.pipx_vars.outputs.local_venvs }}/poetry
-          key: pipx-${{ steps.pipx_vars.outputs.version }}-poetry-${{ runner.os }}
-
       - name: Setup Poetry
-        if: steps.cache_poetry.outputs.cache-hit != 'true'
-        run: pipx install poetry
+        uses: threeal/setup-poetry-action@v1.0.0
 
       - name: Install deps
         run: poetry install --with dev
