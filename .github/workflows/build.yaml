@@ -23,7 +23,15 @@ jobs:
       - name: Setup Poetry
         uses: threeal/setup-poetry-action@v1.0.0
 
+      - name: Cache deps
+        id: cache_deps
+        uses: actions/cache@v3.3.2
+        with:
+          path: .venv
+          key: poetry-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
+
       - name: Install deps
+        if: steps.cache_deps.outputs.cache-hit != 'true'
         run: poetry install --with dev
 
       - name: Check format
