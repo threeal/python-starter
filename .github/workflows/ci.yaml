@@ -5,12 +5,13 @@ on:
   push:
     branches: [main]
 jobs:
-  project:
+  build:
+    name: Build
     runs-on: ${{ matrix.os }}-latest
     strategy:
       fail-fast: false
       matrix:
-        os: [windows, ubuntu, macos]
+        os: [Windows, Ubuntu, macOS]
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.0
