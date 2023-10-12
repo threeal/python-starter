@@ -1,6 +1,6 @@
 import sys
 
-from . import fibonacci_series
+from .series import fibonacci_series
 
 
 def main():
