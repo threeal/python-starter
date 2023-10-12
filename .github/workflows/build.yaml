@@ -44,4 +44,4 @@ jobs:
         run: poetry run flake8 lib
 
       - name: Run module
-        run: poetry run starter 10
+        run: poetry run my_fibonacci 10
