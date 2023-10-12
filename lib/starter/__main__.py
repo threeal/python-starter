@@ -1,11 +1,11 @@
 import sys
 
-from .series import fibonacci_series
+from .sequence import fibonacci_sequence
 
 
 def main():
-    series = fibonacci_series(int(sys.argv[1]))
-    print(" ".join(str(item) for item in series))
+    sequence = fibonacci_sequence(int(sys.argv[1]))
+    print(" ".join(str(item) for item in sequence))
 
 
 if __name__ == "__main__":

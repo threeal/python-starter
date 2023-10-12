@@ -1,4 +1,4 @@
 from .__main__ import main
-from .series import fibonacci_series
+from .sequence import fibonacci_sequence
 
-__all__ = ["fibonacci_series", "main"]
+__all__ = ["fibonacci_sequence", "main"]
