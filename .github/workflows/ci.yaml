@@ -36,13 +36,13 @@ jobs:
         run: poetry install --with dev
 
       - name: Check format
-        run: poetry poe format && git diff --exit-code HEAD
+        run: poetry run poe format && git diff --exit-code HEAD
 
       - name: Check lint
-        run: poetry poe lint
+        run: poetry run poe lint
 
       - name: Run testing
-        run: poetry poe test
+        run: poetry run poe test
 
       - name: Run module
         run: poetry run my_fibonacci 10
