@@ -44,5 +44,8 @@ jobs:
       - name: Check lint
         run: poetry run flake8 lib
 
+      - name: Run testing
+        run: poetry run pytest -v
+
       - name: Run module
         run: poetry run my_fibonacci 10
