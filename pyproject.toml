@@ -52,3 +52,7 @@ shell = """
     isort lib tests
     black lib tests
 """
+
+[tool.coverage.report]
+fail_under = 100
+omit = ["__main__.py"]
