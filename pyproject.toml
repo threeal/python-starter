@@ -36,6 +36,18 @@ black = "^23.10.0"
 isort = "^5.12.0"
 flake8 = "^6.1.0"
 pytest = "^7.4.2"
+poethepoet = "^0.24.1"
 
 [tool.poetry.scripts]
 my_fibonacci = "my_fibonacci:main"
+
+[tool.poe.tasks]
+check = ["format", "lint"]
+lint = "flake8 lib tests"
+test = "pytest -v"
+
+[tool.poe.tasks.format]
+shell = """
+    isort lib tests
+    black lib tests
+"""
