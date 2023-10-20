@@ -36,16 +36,13 @@ jobs:
         run: poetry install --with dev
 
       - name: Check format
-        run: |
-          poetry run isort lib
-          poetry run black lib
-          git diff --exit-code HEAD
+        run: poetry poe format && git diff --exit-code HEAD
 
       - name: Check lint
-        run: poetry run flake8 lib
+        run: poetry poe lint
 
       - name: Run testing
-        run: poetry run pytest -v
+        run: poetry poe test
 
       - name: Run module
         run: poetry run my_fibonacci 10
