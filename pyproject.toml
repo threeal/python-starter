@@ -37,6 +37,7 @@ isort = "^5.12.0"
 flake8 = "^6.1.0"
 pytest = "^7.4.2"
 poethepoet = "^0.24.1"
+pytest-cov = "^4.1.0"
 
 [tool.poetry.scripts]
 my_fibonacci = "my_fibonacci:main"
@@ -44,7 +45,7 @@ my_fibonacci = "my_fibonacci:main"
 [tool.poe.tasks]
 check = ["format", "lint"]
 lint = "flake8 lib tests"
-test = "pytest -v"
+test = "pytest -v --cov=my_fibonacci"
 
 [tool.poe.tasks.format]
 shell = """
