@@ -5,8 +5,8 @@ on:
   push:
     branches: [main]
 jobs:
-  build:
-    name: Build
+  test:
+    name: Test
     runs-on: ${{ matrix.os }}-latest
     strategy:
       fail-fast: false
@@ -43,6 +43,3 @@ jobs:
 
       - name: Run testing
         run: poetry run poe test
-
-      - name: Run module
-        run: poetry run my_fibonacci 10
