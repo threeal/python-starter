@@ -43,6 +43,3 @@ jobs:
 
       - name: Run testing
         run: poetry run poe test
-
-      - name: Run module
-        run: poetry run my_fibonacci 10
