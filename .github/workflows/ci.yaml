@@ -43,3 +43,6 @@ jobs:
 
       - name: Run testing
         run: poetry run poe test
+
+      - name: Generate docs
+        run: poetry run poe docs
