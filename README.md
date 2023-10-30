@@ -10,6 +10,7 @@ The Python Starter is a [GitHub repository template](https://docs.github.com/en/
 
 - [Poetry](https://python-poetry.org/) for project management.
 - [Pytest](https://docs.pytest.org/en/7.4.x/) for testing and coverage checks.
+- Documentation generation with [pydoctor](https://pydoctor.readthedocs.io/en/latest/index.html).
 - Consistent code formatting with [Black](https://black.readthedocs.io/en/stable/).
 - Import sorting with [isort](https://pycqa.github.io/isort/).
 - Static analysis and linting with [Flake8](https://flake8.pycqa.org/en/latest/).
