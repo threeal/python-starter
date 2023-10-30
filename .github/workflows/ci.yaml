@@ -5,8 +5,8 @@ on:
   push:
     branches: [main]
 jobs:
-  test:
-    name: Test
+  build:
+    name: Build
     runs-on: ${{ matrix.os }}-latest
     strategy:
       fail-fast: false
