@@ -669,13 +669,13 @@ files = [
 
 [[package]]
 name = "pydoctor"
-version = "23.9.0"
+version = "23.9.1"
 description = "API doc generator."
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "pydoctor-23.9.0-py3-none-any.whl", hash = "sha256:b5dd04390feb4608e25bc6d918e5be00746a9e882046eb8f6de163a129097d7a"},
-    {file = "pydoctor-23.9.0.tar.gz", hash = "sha256:769b0bb7211539888a9e9f06380dc56ac5753aaacbb24d23595ac62c8696ed96"},
+    {file = "pydoctor-23.9.1-py3-none-any.whl", hash = "sha256:341cafb7847e3ad17237b725f2c4a04b0b824f154910c3b5cce6aa4a881056db"},
+    {file = "pydoctor-23.9.1.tar.gz", hash = "sha256:e5b7758a51889afdfc101996f7871dc7afb5d3dd7bbcaab895bfe54cdf4f2f17"},
 ]
 
 [package.dependencies]
@@ -965,4 +965,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "0565b451be04980fea8fda4489677e1c7d74600d1bfb3b9e5112e9aebab848ad"
+content-hash = "8f3837f6652ce859d61ad93d4d439bcbc80085a255e5f3ef4c1c6b789264a6a8"
