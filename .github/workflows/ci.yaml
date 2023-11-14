@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [Windows, Ubuntu, macOS]
+        os: [windows, ubuntu, macos]
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
@@ -46,3 +46,32 @@ jobs:
 
       - name: Generate docs
         run: poetry run poe docs
+
+      - name: Upload docs artifact
+        if: ${{ matrix.os }} == 'ubuntu'
+        uses: actions/upload-pages-artifact@v2.0.0
+        with:
+          path: docs
+
+  deploy:
+    name: Deploy
+    if: github.event_name != 'pull_request' && github.ref_name == 'main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v3.0.6
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v2.0.4
