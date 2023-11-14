@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [Windows, Ubuntu, macOS]
+        os: [windows, ubuntu, macos]
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
@@ -48,6 +48,7 @@ jobs:
         run: poetry run poe docs
 
       - name: Upload docs artifact
+        if: ${{ matrix.os }} == 'ubuntu'
         uses: actions/upload-pages-artifact@v2.0.0
         with:
           path: docs
