@@ -15,6 +15,7 @@ The Python Starter is a [GitHub repository template](https://docs.github.com/en/
 - Import sorting with [isort](https://pycqa.github.io/isort/).
 - Static analysis and linting with [Flake8](https://flake8.pycqa.org/en/latest/).
 - Preconfigured [GitHub Actions](https://github.com/features/actions) workflow for CI.
+- Documentation deployment on [GitHub Pages](https://pages.github.com/).
 - [Dependabot](https://docs.github.com/en/code-security/dependabot) support for dependency updates.
 
 ## Usage
