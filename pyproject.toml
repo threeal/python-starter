@@ -34,11 +34,11 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 black = "^23.11.0"
 isort = "^5.12.0"
-flake8 = "^6.1.0"
 pytest = "^7.4.3"
 poethepoet = "^0.24.4"
 pytest-cov = "^4.1.0"
 pydoctor = "^23.9.1"
+ruff = "^0.1.6"
 
 [tool.poetry.scripts]
 my_fibonacci = "my_fibonacci.__main__:main"
@@ -46,7 +46,7 @@ my_fibonacci = "my_fibonacci.__main__:main"
 [tool.poe.tasks]
 check = ["format", "lint"]
 docs = "pydoctor --make-html --html-output=docs lib/my_fibonacci"
-lint = "flake8 lib tests"
+lint = "ruff check lib tests"
 test = "pytest -v --cov=my_fibonacci"
 
 [tool.poe.tasks.format]
