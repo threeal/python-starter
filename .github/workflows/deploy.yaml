@@ -1,0 +1,55 @@
+name: Deploy
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  deploy-pages:
+    name: Deploy Pages
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v4.0.0
+
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5.0.0
+        with:
+          python-version: 3.11
+
+      - name: Setup Poetry
+        uses: threeal/setup-poetry-action@v1.0.0
+
+      - name: Cache Dependencies
+        id: cache-deps
+        uses: actions/cache@v3.3.2
+        with:
+          path: .venv
+          key: poetry-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
+
+      - name: Install Dependencies
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: poetry install --with dev
+
+      - name: Generate Documentation
+        run: poetry run poe docs
+
+      - name: Upload Documentation
+        uses: actions/upload-pages-artifact@v3.0.0
+        with:
+          path: docs
+
+      - name: Deploy Pages
+        id: deploy-pages
+        uses: actions/deploy-pages@v4.0.2
