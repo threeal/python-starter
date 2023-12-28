@@ -1,0 +1,73 @@
+name: Test
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check-package:
+    name: Check Package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5.0.0
+        with:
+          python-version: 3.11
+
+      - name: Setup Poetry
+        uses: threeal/setup-poetry-action@v1.0.0
+
+      - name: Cache Dependencies
+        id: cache-deps
+        uses: actions/cache@v3.3.2
+        with:
+          path: .venv
+          key: poetry-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
+
+      - name: Install Dependencies
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: poetry install --with dev
+
+      - name: Check Format
+        run: |
+          poetry run poe format
+          git diff --exit-code HEAD
+
+      - name: Check Lint
+        run: poetry run poe lint
+
+  test-package:
+    name: Test Package
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows, ubuntu, macos]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5.0.0
+        with:
+          python-version: 3.11
+
+      - name: Setup Poetry
+        uses: threeal/setup-poetry-action@v1.0.0
+
+      - name: Cache Dependencies
+        id: cache-deps
+        uses: actions/cache@v3.3.2
+        with:
+          path: .venv
+          key: poetry-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
+
+      - name: Install Dependencies
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: poetry install --with dev
+
+      - name: Test Package
+        run: poetry run poe test

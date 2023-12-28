@@ -5,8 +5,8 @@ on:
   push:
     branches: [main]
 jobs:
-  build:
-    name: Build Package
+  generate-docs:
+    name: Generate Documentation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,15 +30,6 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-deps.outputs.cache-hit != 'true'
         run: poetry install --with dev
-
-      - name: Check Format
-        run: poetry run poe format && git diff --exit-code HEAD
-
-      - name: Check Lint
-        run: poetry run poe lint
-
-      - name: Test Package
-        run: poetry run poe test
 
       - name: Generate Documentation
         run: poetry run poe docs
