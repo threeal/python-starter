@@ -42,7 +42,7 @@ ruff = "^0.1.9"
 my_fibonacci = "my_fibonacci.__main__:main"
 
 [tool.poe.tasks]
-docs = "pydoctor --make-html --html-output=docs lib/my_fibonacci"
+docs = "pydoctor --make-html lib/my_fibonacci"
 format = "ruff format lib tests"
 lint = "ruff check lib tests"
 test = "pytest -v --cov=my_fibonacci"
