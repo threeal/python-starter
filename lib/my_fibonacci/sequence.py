@@ -3,10 +3,16 @@
 
 def fibonacci_sequence(n: int) -> list[int]:
     """Generate a Fibonacci sequence up to the given number of terms."""
-    sequence = [0, 1]
-    for _ in range(n - 1):
-        sequence.append(sequence[-1] + sequence[-2])
-    return sequence[1:]
+    if n <= 0:
+        return []
+    if n == 1:
+        return [1]
+
+    sequence = [1, 1]
+    for _ in range(n - 2):
+        sequence.append(sequence[-2] + sequence[-1])
+
+    return sequence
 
 
 __all__ = ["fibonacci_sequence"]
