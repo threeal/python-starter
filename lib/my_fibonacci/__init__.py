@@ -1,4 +1,4 @@
-"""Example Module for Python Starter template."""
+"""An example Python module."""
 
 from .sequence import fibonacci_sequence
 
