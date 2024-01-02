@@ -10,15 +10,13 @@ The Python Starter is a [GitHub repository template](https://docs.github.com/en/
 
 ## Key Features
 
-- [Poetry](https://python-poetry.org/) for project management.
-- [Pytest](https://docs.pytest.org/en/7.4.x/) for testing and coverage checks.
-- Documentation generation with [pydoctor](https://pydoctor.readthedocs.io/en/latest/index.html).
-- Consistent code formatting with [Black](https://black.readthedocs.io/en/stable/).
-- Import sorting with [isort](https://pycqa.github.io/isort/).
-- Static analysis and linting with [Flake8](https://flake8.pycqa.org/en/latest/).
-- Preconfigured [GitHub Actions](https://github.com/features/actions) workflow for CI.
-- Documentation deployment on [GitHub Pages](https://pages.github.com/).
-- [Dependabot](https://docs.github.com/en/code-security/dependabot) support for dependency updates.
+- Organized file structure for Python projects, featuring a sample `pyproject.toml`, a sample module, and associated testing files.
+- Project and dependency management with [Poetry](https://python-poetry.org/), supplemented by [Poe the Poet](https://poethepoet.natn.io/index.html) for task management.
+- Code formatting and linting with [Ruff](https://github.com/astral-sh/ruff), leveraging all recommended rules for enhanced code quality.
+- Testing framework powered by [Pytest](https://docs.pytest.org/en/7.4.x/), complete with support for test coverage checks.
+- API documentation generation with [pydoctor](https://pydoctor.readthedocs.io/en/latest/index.html) and automated deployment to [GitHub Pages](https://pages.github.com/).
+- [GitHub Actions](https://github.com/features/actions) support with multiple workflows for continuous integration (CI) and continuous delivery (CD).
+- Automated dependency update checks with [Dependabot](https://docs.github.com/en/code-security/dependabot).
 
 ## Usage
 
