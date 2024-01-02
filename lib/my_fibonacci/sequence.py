@@ -1,4 +1,4 @@
-"""Fibonacci Sequence Generator Module."""
+"""A Fibonacci sequence generator module."""
 
 
 def fibonacci_sequence(n: int) -> list[int]:
