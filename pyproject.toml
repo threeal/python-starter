@@ -52,4 +52,4 @@ fail_under = 100
 omit = ["__main__.py"]
 
 [tool.ruff.lint]
-extend-select = ["E", "W", "C90", "I", "N", "UP", "A", "C4", "ICN", "INP", "PIE", "PT"]
+extend-select = ["E", "W", "C90", "I", "N", "UP", "A", "C4", "ICN", "INP", "PIE", "PT", "Q"]
