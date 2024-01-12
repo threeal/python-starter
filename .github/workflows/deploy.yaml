@@ -33,7 +33,7 @@ jobs:
 
       - name: Cache Dependencies
         id: cache-deps
-        uses: actions/cache@v3.3.2
+        uses: actions/cache@v3.3.3
         with:
           path: .venv
           key: poetry-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
