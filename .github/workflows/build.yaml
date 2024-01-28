@@ -18,7 +18,7 @@ jobs:
           python-version: 3.11
 
       - name: Setup Poetry
-        uses: threeal/setup-poetry-action@v1.0.0
+        uses: threeal/setup-poetry-action@v1.1.0
 
       - name: Cache Dependencies
         id: cache-deps
@@ -52,7 +52,7 @@ jobs:
           python-version: 3.11
 
       - name: Setup Poetry
-        uses: threeal/setup-poetry-action@v1.0.0
+        uses: threeal/setup-poetry-action@v1.1.0
 
       - name: Cache Dependencies
         id: cache-deps
