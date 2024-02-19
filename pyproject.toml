@@ -32,7 +32,7 @@ python = "^3.10"
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.0.0"
+pytest = "^8.0.1"
 poethepoet = "^0.24.4"
 pytest-cov = "^4.1.0"
 pydoctor = "^23.9.1"
