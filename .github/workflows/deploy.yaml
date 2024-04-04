@@ -18,7 +18,7 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: Setup Pages
-        uses: actions/configure-pages@v4.0.0
+        uses: actions/configure-pages@v5.0.0
 
       - name: Checkout
         uses: actions/checkout@v4.1.2
