@@ -35,7 +35,7 @@ optional = true
 pytest = "^8.2.0"
 poethepoet = "^0.26.1"
 pytest-cov = "^5.0.0"
-pydoctor = "^23.9.1"
+pydoctor = "^24.3.3"
 ruff = "^0.4.4"
 
 [tool.poetry.scripts]
