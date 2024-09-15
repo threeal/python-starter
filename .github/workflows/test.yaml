@@ -22,7 +22,7 @@ jobs:
 
       - name: Cache Dependencies
         id: cache-deps
-        uses: threeal/cache-action@v0.1.0
+        uses: threeal/cache-action@v0.2.0
         with:
           key: poetry-${{ runner.os }}
           version: ${{ hashFiles('pyproject.toml') }}
@@ -57,7 +57,7 @@ jobs:
 
       - name: Cache Dependencies
         id: cache-deps
-        uses: threeal/cache-action@v0.1.0
+        uses: threeal/cache-action@v0.2.0
         with:
           key: poetry-${{ runner.os }}
           version: ${{ hashFiles('pyproject.toml') }}
