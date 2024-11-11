@@ -33,7 +33,7 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
-poethepoet = "^0.29.0"
+poethepoet = "^0.30.0"
 pytest-cov = "^6.0.0"
 pydoctor = "^24.3.3"
 ruff = "^0.7.3"
