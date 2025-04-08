@@ -34,7 +34,7 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
 poethepoet = "^0.33.1"
-pytest-cov = "^6.1.0"
+pytest-cov = "^6.1.1"
 pydoctor = "^24.11.2"
 ruff = "^0.11.4"
 
