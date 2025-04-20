@@ -22,14 +22,13 @@ jobs:
 
       - name: Cache Dependencies
         id: cache-deps
-        uses: threeal/cache-action@v0.2.1
+        uses: actions/cache@v4.2.3
         with:
-          key: poetry-${{ runner.os }}
-          version: ${{ hashFiles('pyproject.toml') }}
-          files: .venv
+          key: poetry-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
+          path: .venv
 
       - name: Install Dependencies
-        if: steps.cache-deps.outputs.restored == 'false'
+        if: steps.cache-deps.outputs.cache-hit != 'true'
         run: poetry install --with dev
 
       - name: Build Package
@@ -57,14 +56,13 @@ jobs:
 
       - name: Cache Dependencies
         id: cache-deps
-        uses: threeal/cache-action@v0.2.1
+        uses: actions/cache@v4.2.3
         with:
-          key: poetry-${{ runner.os }}
-          version: ${{ hashFiles('pyproject.toml') }}
-          files: .venv
+          key: poetry-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
+          path: .venv
 
       - name: Install Dependencies
-        if: steps.cache-deps.outputs.restored == 'false'
+        if: steps.cache-deps.outputs.cache-hit != 'true'
         run: poetry install --with dev
 
       - name: Generate Documentation
