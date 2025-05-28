@@ -36,7 +36,7 @@ pytest = "^8.3.5"
 poethepoet = "^0.34.0"
 pytest-cov = "^6.1.1"
 pydoctor = "^25.4.0"
-ruff = "^0.11.10"
+ruff = "^0.11.11"
 
 [tool.poetry.scripts]
 my_fibonacci = "my_fibonacci.__main__:main"
