@@ -20,15 +20,7 @@ jobs:
       - name: Setup Poetry
         uses: threeal/setup-poetry-action@v1.2.0
 
-      - name: Cache Dependencies
-        id: cache-deps
-        uses: actions/cache@v4.2.3
-        with:
-          key: poetry-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
-          path: .venv
-
       - name: Install Dependencies
-        if: steps.cache-deps.outputs.cache-hit != 'true'
         run: poetry install --with dev
 
       - name: Check Format
