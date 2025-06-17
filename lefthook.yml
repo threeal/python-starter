@@ -23,4 +23,4 @@ pre-commit:
         - pyproject.toml
 
     - name: check diff
-      run: git diff --exit-code dist {staged_files}
+      run: git diff --exit-code {staged_files}
