@@ -8,7 +8,7 @@ The Python Starter is a [GitHub repository template](https://docs.github.com/en/
 - Project and dependency management with [Poetry](https://python-poetry.org/), supplemented by [Poe the Poet](https://poethepoet.natn.io/index.html) for task management.
 - Code formatting and linting with [Ruff](https://github.com/astral-sh/ruff), leveraging all recommended rules for enhanced code quality.
 - Testing framework powered by [Pytest](https://docs.pytest.org/en/7.4.x/), complete with support for test coverage checks.
-- API documentation generation with [pydoctor](https://pydoctor.readthedocs.io/en/latest/index.html) and automated deployment to [GitHub Pages](https://pages.github.com/).
+- API documentation generation with [pydoctor](https://pydoctor.readthedocs.io/en/latest/index.html).
 - [GitHub Actions](https://github.com/features/actions) support with multiple workflows for continuous integration (CI) and continuous delivery (CD).
 - Automated dependency update checks with [Dependabot](https://docs.github.com/en/code-security/dependabot).
 
