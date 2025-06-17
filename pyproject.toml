@@ -34,21 +34,18 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 lefthook = "^1.11.14"
 pytest = "^8.4.0"
-poethepoet = "^0.35.0"
 pytest-cov = "^6.2.1"
 ruff = "^0.11.13"
 
 [tool.poetry.scripts]
 my_fibonacci = "my_fibonacci.__main__:main"
 
-[tool.poe.tasks]
-format = "ruff format lib tests"
-lint = "ruff check lib tests"
-test = "pytest -v --cov=my_fibonacci"
-
 [tool.coverage.report]
 fail_under = 100
 omit = ["__main__.py"]
+
+[tool.coverage.run]
+source = ["my_fibonacci"]
 
 [tool.ruff.lint]
 select = ["ALL"]
