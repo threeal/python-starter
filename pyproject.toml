@@ -49,7 +49,7 @@ source = ["my_fibonacci"]
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["D"]
+ignore = ["COM812", "D"]
 
 [tool.ruff.lint.per-file-ignores]
 "__main__.py" = ["T201"]
