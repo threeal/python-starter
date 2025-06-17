@@ -32,15 +32,13 @@ jobs:
         run: poetry install --with dev
 
       - name: Check Format
-        run: |
-          poetry run poe format
-          git diff --exit-code HEAD
+        run: poetry run ruff format --diff
 
       - name: Check Lint
-        run: poetry run poe lint
+        run: poetry run ruff check
 
       - name: Test Package
-        run: poetry run poe test
+        run: poetry run pytest -v --cov
 
       - name: Build Package
         run: poetry build
