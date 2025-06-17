@@ -120,6 +120,18 @@ files = [
 ]
 
 [[package]]
+name = "lefthook"
+version = "1.11.14"
+description = "Git hooks manager. Fast, powerful, simple."
+optional = false
+python-versions = ">=3.6"
+groups = ["dev"]
+files = [
+    {file = "lefthook-1.11.14-py3-none-any.whl", hash = "sha256:daf02089d0ba368070a132524bf0b2068ba131d2208678eecac719c351b72dac"},
+    {file = "lefthook-1.11.14.tar.gz", hash = "sha256:f41566aef3506214287e1d60c37cc14e1df8bdaa9bc489390b4e0d9a776a9495"},
+]
+
+[[package]]
 name = "packaging"
 version = "23.1"
 description = "Core utilities for Python packages"
@@ -345,4 +357,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "4677acf0d3ee9e6868b12fa3b8d09628c336f2ce628f955a07e5bf1c8c8d0194"
+content-hash = "d7553416a4ea78c21097bdfe647ecc3582f8e61ac9a0eb83e22e579959c58559"

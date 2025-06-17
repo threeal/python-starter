@@ -1,0 +1,20 @@
+pre-commit:
+  piped: true
+  jobs:
+    - name: install dependencies
+      run: poetry install --with dev
+      glob:
+        - poetry.lock
+        - poetry.toml
+        - pyproject.toml
+
+    - name: fix formatting
+      run: poetry run ruff format
+      glob: "*.py"
+
+    - name: fix lint
+      run: poetry run ruff check --fix
+      glob: "*.py"
+
+    - name: check diff
+      run: git diff --exit-code dist {staged_files}
