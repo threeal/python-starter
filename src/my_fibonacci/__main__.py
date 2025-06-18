@@ -1,10 +1,18 @@
-import sys
+import argparse
 
 from . import fibonacci_sequence
 
 
 def main() -> None:
-    sequence = fibonacci_sequence(int(sys.argv[1]))
+    parser = argparse.ArgumentParser(
+        prog="my_fibonacci",
+        description="Generate a Fibonacci sequence up to the given number of terms.",
+    )
+    parser.add_argument("--version", action="version", version="0.0.0")
+    parser.add_argument("n", type=int, help="The number of terms")
+    args = parser.parse_args()
+
+    sequence = fibonacci_sequence(args.n)
     print(" ".join(str(item) for item in sequence))
 
 
