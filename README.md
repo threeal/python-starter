@@ -5,7 +5,7 @@ The Python Starter is a [GitHub repository template](https://docs.github.com/en/
 ## Key Features
 
 - Organized file structure for Python projects, featuring a sample `pyproject.toml`, a sample module, and associated testing files.
-- Project and dependency management with [Poetry](https://python-poetry.org/), supplemented by [Poe the Poet](https://poethepoet.natn.io/index.html) for task management.
+- Project and dependency management with [uv](https://docs.astral.sh/uv/).
 - Code formatting and linting with [Ruff](https://github.com/astral-sh/ruff), leveraging all recommended rules for enhanced code quality.
 - Testing framework powered by [Pytest](https://docs.pytest.org/en/7.4.x/), complete with support for test coverage checks.
 - [GitHub Actions](https://github.com/features/actions) support with multiple workflows for continuous integration (CI) and continuous delivery (CD).

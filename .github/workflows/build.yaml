@@ -12,25 +12,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
 
-      - name: Setup Python
-        uses: actions/setup-python@v5.6.0
-        with:
-          python-version: 3.11
-
-      - name: Setup Poetry
-        uses: threeal/setup-poetry-action@v1.2.0
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v6.1.0
 
       - name: Install Dependencies
-        run: poetry install --with dev
+        run: uv sync --locked
 
       - name: Check Format
-        run: poetry run ruff format --diff
+        run: uv run ruff format --diff
 
       - name: Check Lint
-        run: poetry run ruff check
+        run: uv run ruff check
 
       - name: Test Package
-        run: poetry run pytest -v --cov
+        run: uv run pytest -v --cov
 
       - name: Build Package
-        run: poetry build
+        run: uv build

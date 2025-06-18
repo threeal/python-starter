@@ -2,25 +2,27 @@ pre-commit:
   piped: true
   jobs:
     - name: install dependencies
-      run: poetry install --with dev
+      run: uv sync
       glob:
-        - poetry.lock
-        - poetry.toml
+        - .python-version
         - pyproject.toml
+        - uv.lock
 
     - name: fix formatting
-      run: poetry run ruff format
+      run: uv run ruff format
       glob:
         - "*.py"
-        - poetry.lock
+        - .python-version
         - pyproject.toml
+        - uv.lock
 
     - name: fix lint
-      run: poetry run ruff check --fix
+      run: uv run ruff check --fix
       glob:
         - "*.py"
-        - poetry.lock
+        - .python-version
         - pyproject.toml
+        - uv.lock
 
     - name: check diff
       run: git diff --exit-code {staged_files}
