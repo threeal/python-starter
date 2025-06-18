@@ -1,29 +1,26 @@
 [project]
-name = "my_fibonacci"
+name = "bonacci"
 version = "0.0.0"
 dependencies = []
 requires-python = ">=3.10"
 authors = [
-  {name = "Alfi Maulana", email = "alfi.maulana.f@gmail.com"},
+    {name = "Leonardo Bonacci", email = "leonardo@bonacci.com"},
 ]
-description = "A starter python module for generating a Fibonacci sequence."
+description = "An example Python project for generating a Fibonacci sequence"
 readme = "README.md"
 license = "Unlicense"
-keywords = ["python", "starter", "fibonacci"]
+keywords = ["example", "fibonacci"]
 classifiers = [
-  "Development Status :: 1 - Planning",
-  "Intended Audience :: Developers",
-  "Operating System :: OS Independent",
-  "Programming Language :: Python :: 3 :: Only",
-  "Topic :: Software Development :: Libraries :: Python Modules",
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3 :: Only",
 ]
 
 [project.scripts]
-my_fibonacci = "my_fibonacci.__main__:main"
+bonacci = "bonacci.__main__:main"
 
 [project.urls]
-repository = "https://github.com/threeal/python-starter.git"
-issues = "https://github.com/threeal/python-starter/issues"
+repository = "https://github.com/leonardo/bonacci.git"
+issues = "https://github.com/leonardo/bonacci/issues"
 
 [build-system]
 requires = ["hatchling"]
@@ -31,10 +28,10 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
-  "lefthook>=1.11.14",
-  "pytest>=8.4.0",
-  "pytest-cov>=6.2.1",
-  "ruff>=0.11.13",
+    "lefthook>=1.11.14",
+    "pytest>=8.4.0",
+    "pytest-cov>=6.2.1",
+    "ruff>=0.11.13",
 ]
 
 [tool.coverage.report]
@@ -42,7 +39,7 @@ fail_under = 100
 omit = ["__main__.py"]
 
 [tool.coverage.run]
-source = ["my_fibonacci"]
+source = ["bonacci"]
 
 [tool.ruff.lint]
 select = ["ALL"]

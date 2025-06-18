@@ -1,4 +1,4 @@
-from my_fibonacci import fibonacci_sequence
+from bonacci import fibonacci_sequence
 
 
 def test_fibonacci_sequence() -> None:
