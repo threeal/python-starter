@@ -4,15 +4,15 @@ version = "0.0.0"
 dependencies = []
 requires-python = ">=3.10"
 authors = [
-  {name = "Leonardo Bonacci", email = "leonardo@bonacci.com"},
+    {name = "Leonardo Bonacci", email = "leonardo@bonacci.com"},
 ]
 description = "An example Python project for generating a Fibonacci sequence"
 readme = "README.md"
 license = "Unlicense"
 keywords = ["example", "fibonacci"]
 classifiers = [
-  "Development Status :: 1 - Planning",
-  "Programming Language :: Python :: 3 :: Only",
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3 :: Only",
 ]
 
 [project.scripts]
@@ -28,10 +28,10 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
-  "lefthook>=1.11.14",
-  "pytest>=8.4.0",
-  "pytest-cov>=6.2.1",
-  "ruff>=0.11.13",
+    "lefthook>=1.11.14",
+    "pytest>=8.4.0",
+    "pytest-cov>=6.2.1",
+    "ruff>=0.11.13",
 ]
 
 [tool.coverage.report]
