@@ -10,11 +10,17 @@ pre-commit:
 
     - name: fix formatting
       run: poetry run ruff format
-      glob: "*.py"
+      glob:
+        - "*.py"
+        - poetry.lock
+        - pyproject.toml
 
     - name: fix lint
       run: poetry run ruff check --fix
-      glob: "*.py"
+      glob:
+        - "*.py"
+        - poetry.lock
+        - pyproject.toml
 
     - name: check diff
-      run: git diff --exit-code dist {staged_files}
+      run: git diff --exit-code {staged_files}
