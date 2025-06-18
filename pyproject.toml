@@ -4,26 +4,23 @@ version = "0.0.0"
 dependencies = []
 requires-python = ">=3.10"
 authors = [
-  {name = "Alfi Maulana", email = "alfi.maulana.f@gmail.com"},
+  {name = "Leonardo Bonacci", email = "leonardo@bonacci.com"},
 ]
 description = "An example Python project for generating a Fibonacci sequence"
 readme = "README.md"
 license = "Unlicense"
-keywords = ["python", "starter", "fibonacci"]
+keywords = ["example", "fibonacci"]
 classifiers = [
   "Development Status :: 1 - Planning",
-  "Intended Audience :: Developers",
-  "Operating System :: OS Independent",
   "Programming Language :: Python :: 3 :: Only",
-  "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [project.scripts]
 bonacci = "bonacci.__main__:main"
 
 [project.urls]
-repository = "https://github.com/threeal/python-starter.git"
-issues = "https://github.com/threeal/python-starter/issues"
+repository = "https://github.com/leonardo/bonacci.git"
+issues = "https://github.com/leonardo/bonacci/issues"
 
 [build-system]
 requires = ["hatchling"]
