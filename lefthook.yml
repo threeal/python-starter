@@ -11,4 +11,4 @@ pre-commit:
       run: uv run ruff check --fix
 
     - name: check diff
-      run: git diff --exit-code {staged_files}
+      run: git diff --exit-code uv.lock {staged_files}
