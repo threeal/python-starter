@@ -3,26 +3,12 @@ pre-commit:
   jobs:
     - name: install dependencies
       run: uv sync
-      glob:
-        - .python-version
-        - pyproject.toml
-        - uv.lock
 
     - name: fix formatting
       run: uv run ruff format
-      glob:
-        - "*.py"
-        - .python-version
-        - pyproject.toml
-        - uv.lock
 
     - name: fix lint
       run: uv run ruff check --fix
-      glob:
-        - "*.py"
-        - .python-version
-        - pyproject.toml
-        - uv.lock
 
     - name: check diff
-      run: git diff --exit-code {staged_files}
+      run: git diff --exit-code uv.lock {staged_files}
