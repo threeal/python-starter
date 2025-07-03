@@ -41,6 +41,9 @@ omit = ["__main__.py"]
 [tool.coverage.run]
 source = ["bonacci"]
 
+[tool.hatch.build.targets.sdist]
+include = ["src"]
+
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = ["COM812", "D"]
