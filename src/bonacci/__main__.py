@@ -1,4 +1,5 @@
 import argparse
+import sys
 
 from . import fibonacci_sequence
 
@@ -13,7 +14,7 @@ def main() -> None:
     args = parser.parse_args()
 
     sequence = fibonacci_sequence(args.n)
-    print(" ".join(str(item) for item in sequence))
+    sys.stdout.write(f"{' '.join(str(item) for item in sequence)}\n")
 
 
 if __name__ == "__main__":
