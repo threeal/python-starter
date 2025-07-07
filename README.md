@@ -6,10 +6,11 @@ This template provides a basic Python project containing an example package with
 
 ## Key Features
 
-* Uses [uv](https://docs.astral.sh/uv/) as the package manager.
-* Supports formatting and linting with [Ruff](https://github.com/astral-sh/ruff), and testing with [Pytest](https://docs.pytest.org/en/stable/).
-* Fixes formatting and linting during pre-commit hooks using [Lefthook](https://lefthook.dev/).
-* Preconfigured workflows for [Dependabot](https://docs.github.com/en/code-security/dependabot) and [GitHub Actions](https://github.com/features/actions).
+- Uses [uv](https://docs.astral.sh/uv/) as the package manager.
+- Supports formatting and linting with [dprint](https://dprint.dev/) and [Ruff](https://github.com/astral-sh/ruff).
+- Supports testing and coverage checks with [Pytest](https://docs.pytest.org/en/stable/).
+- Fixes formatting and linting issues during pre-commit hooks using [Lefthook](https://lefthook.dev/).
+- Includes preconfigured workflows for [Dependabot](https://docs.github.com/en/code-security/dependabot) and [GitHub Actions](https://github.com/features/actions).
 
 ## Usage
 
