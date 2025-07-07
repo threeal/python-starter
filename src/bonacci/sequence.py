@@ -1,3 +1,6 @@
+"""Example functions for generating Fibonacci sequences."""
+
+
 def fibonacci_sequence(n: int) -> list[int]:
     """Generate a Fibonacci sequence up to the given number of terms."""
     if n <= 0:
