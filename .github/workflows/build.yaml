@@ -18,8 +18,8 @@ jobs:
       - name: Install Dependencies
         run: uv sync --locked
 
-      - name: Check Format
-        run: uv run ruff format --diff
+      - name: Check Formatting
+        uses: dprint/check@v2.3
 
       - name: Check Lint
         run: uv run ruff check

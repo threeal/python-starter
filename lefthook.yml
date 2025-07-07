@@ -5,7 +5,7 @@ pre-commit:
       run: uv sync
 
     - name: fix formatting
-      run: uv run ruff format
+      run: dprint fmt
 
     - name: fix lint
       run: uv run ruff check --fix
