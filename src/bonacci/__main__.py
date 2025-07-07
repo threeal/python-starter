@@ -1,3 +1,5 @@
+"""Example main module for the CLI application."""
+
 import argparse
 import sys
 
@@ -5,6 +7,7 @@ from . import fibonacci_sequence
 
 
 def main() -> None:
+    """Generate and print a Fibonacci sequence based on command line arguments."""
     parser = argparse.ArgumentParser(
         prog="bonacci",
         description="Generate a Fibonacci sequence up to the given number of terms",
