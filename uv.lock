@@ -76,11 +76,11 @@ wheels = [
 
 [[package]]
 name = "lefthook"
-version = "1.12.3"
+version = "1.12.4"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/88/85/675be12efacd293e758deab158277872fe6083bfbce5c3ebd7625903ca44/lefthook-1.12.3.tar.gz", hash = "sha256:d352886fece033521c89fbc270328d9ac185bf9499c58d88fa3c6c766269773a", size = 51939794, upload-time = "2025-08-12T10:03:59.169Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/59/6b/1a4cf8ea2b538ecdd070f75a6bde25f6594920baff71ab8d850e6567aeb5/lefthook-1.12.4.tar.gz", hash = "sha256:3d7b0bde9c4f9d8ac6cb8a9289f8c4e772c408ea3a24fc898fc3cb99f1f2907d", size = 51975179, upload-time = "2025-09-08T06:56:42.813Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b3/15/cd59026ce051ca331b8067e9222a71102745cd251742305866154f96e634/lefthook-1.12.3-py3-none-any.whl", hash = "sha256:f0ffd4338c361c192d4bbc1a540e41224d8a607d9accc0a7bd0c1ec6d6a7040e", size = 52188138, upload-time = "2025-08-12T10:03:55.48Z" },
+    { url = "https://files.pythonhosted.org/packages/de/e3/e66ab2a032e6f7a53835074f2eb6447dca60740eea13457156081e27f78d/lefthook-1.12.4-py3-none-any.whl", hash = "sha256:ed4501a54ddce3fa320d035a7d76ba6a6ba30a224623ccd6e2ad4af9b9cc7a13", size = 52225792, upload-time = "2025-09-08T06:56:39.382Z" },
 ]
 
 [[package]]
