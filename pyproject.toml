@@ -30,7 +30,7 @@ build-backend = "hatchling.build"
 dev = [
   "lefthook>=1.11.14",
   "pytest>=8.4.0",
-  "pytest-cov>=6.2.1",
+  "pytest-cov>=7.0.0",
   "ruff>=0.11.13",
 ]
 
