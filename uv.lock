@@ -19,10 +19,10 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "lefthook", specifier = ">=1.11.14" },
-    { name = "pytest", specifier = ">=8.4.0" },
+    { name = "lefthook", specifier = ">=1.12.4" },
+    { name = "pytest", specifier = ">=8.4.2" },
     { name = "pytest-cov", specifier = ">=7.0.0" },
-    { name = "ruff", specifier = ">=0.11.13" },
+    { name = "ruff", specifier = ">=0.12.8" },
 ]
 
 [[package]]
