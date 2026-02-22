@@ -1,5 +1,7 @@
 pre-commit:
   piped: true
+  fail_on_changes: always
+  fail_on_changes_diff: true
   jobs:
     - name: install dependencies
       run: uv sync
@@ -9,6 +11,3 @@ pre-commit:
 
     - name: fix lint
       run: uv run ruff check --fix
-
-    - name: check diff
-      run: git diff --exit-code uv.lock {staged_files}
