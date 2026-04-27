@@ -19,7 +19,7 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "lefthook", specifier = ">=1.12.4" },
+    { name = "lefthook", specifier = ">=2.1.6" },
     { name = "pytest", specifier = ">=8.4.2" },
     { name = "pytest-cov", specifier = ">=7.0.0" },
     { name = "ruff", specifier = ">=0.15.12" },
@@ -98,15 +98,15 @@ wheels = [
 
 [[package]]
 name = "lefthook"
-version = "2.1.3"
+version = "2.1.6"
 source = { registry = "https://pypi.org/simple" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/dd/35/f982ba5a34005e783dcfaa54c82716f27480ffa749862c7664d242fc60b5/lefthook-2.1.3-py3-none-macosx_10_15_x86_64.whl", hash = "sha256:c92250e553947e350cc7423aed641ca624529ab699cf2931ce9e892de80f9d09", size = 5433164, upload-time = "2026-03-07T08:25:07.995Z" },
-    { url = "https://files.pythonhosted.org/packages/06/a0/759d190ad136001450a206e95693208ffdae24dac0fa11d13ffc38a9610b/lefthook-2.1.3-py3-none-macosx_11_0_arm64.whl", hash = "sha256:a6f444e56b6b97da0bb1af4bc408333e645a2a5a66e5f1779962d3ed2c34553f", size = 4957367, upload-time = "2026-03-07T08:25:00.366Z" },
-    { url = "https://files.pythonhosted.org/packages/16/57/23f09079e4746b5aa16421dc23418c365ee13aa4a2d9fea8ee2418727c7b/lefthook-2.1.3-py3-none-manylinux_2_17_aarch64.whl", hash = "sha256:11df1237019ab4d753ad6b013f0ea2e3c6e8e9c2b675331ff041222dc6379109", size = 4785776, upload-time = "2026-03-07T08:25:06.597Z" },
-    { url = "https://files.pythonhosted.org/packages/ab/87/c9348f6e4d1942597913c683305af2ffcc3fbf802e94d56bfde4a3b28ad5/lefthook-2.1.3-py3-none-manylinux_2_17_x86_64.whl", hash = "sha256:4624342d7b63fae98704eca37775426ad93da4aaa0279412b01b9925cad67d56", size = 5358700, upload-time = "2026-03-07T08:25:01.807Z" },
-    { url = "https://files.pythonhosted.org/packages/00/6b/8c5df6cc06c11ec22f3c589cc1b4b76d4e87c3f66df54a45c0db0b1e47f5/lefthook-2.1.3-py3-none-win_amd64.whl", hash = "sha256:889ab8a5b3e2cb830cb65db3e53bf0d157f759d041fb15cd751644afc7834c8a", size = 5509139, upload-time = "2026-03-07T08:25:03.427Z" },
-    { url = "https://files.pythonhosted.org/packages/44/0b/f2bd48462561cc999297db4fb84f7bee6a0287248e3df8a52e3b74791a05/lefthook-2.1.3-py3-none-win_arm64.whl", hash = "sha256:1316aa7c5baa7435925a1b6f09a56e0581dc59e627831693c5c67d33c490b195", size = 4862556, upload-time = "2026-03-07T08:25:05.037Z" },
+    { url = "https://files.pythonhosted.org/packages/5a/1c/95addeea6b681f02cd44e40d8ce970973783f7b48081af88d3831c4f6da6/lefthook-2.1.6-py3-none-macosx_10_15_x86_64.whl", hash = "sha256:6d4608d0bb9dbcf10d333132973941c21bc7cde31a328658611e2066eec26d7e", size = 5439518, upload-time = "2026-04-16T07:34:18.136Z" },
+    { url = "https://files.pythonhosted.org/packages/cd/d4/2c645051bed898f1ad377e7c2e611e0f857502ca76d052db0f8333bb668d/lefthook-2.1.6-py3-none-macosx_11_0_arm64.whl", hash = "sha256:fa6395917dc510c2622f31b6d3992c5506ff2a7569cd9d321712ec29689229b3", size = 4964898, upload-time = "2026-04-16T07:34:13.497Z" },
+    { url = "https://files.pythonhosted.org/packages/19/ea/15b0384c1227ad172af0c18f21f7e00c570ccce086af471ac32edc2cb507/lefthook-2.1.6-py3-none-manylinux_2_17_aarch64.whl", hash = "sha256:016295036dd1d94af7ea6604247f0c47102559fb12f97ffcfe7880e8d1ce7a1f", size = 4791370, upload-time = "2026-04-16T07:34:15.04Z" },
+    { url = "https://files.pythonhosted.org/packages/aa/c0/3d43c9e1a08fa79d53f0c6eb808fb0ae9becf29bc7bd89cd757470af040e/lefthook-2.1.6-py3-none-manylinux_2_17_x86_64.whl", hash = "sha256:6c00cd91d553e064a2f71c35d2497b4350d1efdf18dd8f2c7ce2b1d6e8e2e147", size = 5367784, upload-time = "2026-04-16T07:34:10.414Z" },
+    { url = "https://files.pythonhosted.org/packages/e6/99/cad1e694989964a8a79b34fdd18e6642bc631e280c06a9341565b5861e3b/lefthook-2.1.6-py3-none-win_amd64.whl", hash = "sha256:e571c48a227f51e5b8aec117c550c6d2ad1f74034e87afd5b0c98cbef319ad3e", size = 5516604, upload-time = "2026-04-16T07:34:12.061Z" },
+    { url = "https://files.pythonhosted.org/packages/85/e9/286657a2c7efbb8701380c4c8a08c54d7f58938a4610d660c463fa074ee3/lefthook-2.1.6-py3-none-win_arm64.whl", hash = "sha256:985b88d908067a6d48a0e89cbc20c18b6a68a3fc4d44387f8ac1c39b85f0f18b", size = 4867769, upload-time = "2026-04-16T07:34:16.757Z" },
 ]
 
 [[package]]
