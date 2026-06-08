@@ -31,7 +31,7 @@ dev = [
   "lefthook>=2.1.9",
   "pytest>=8.4.2",
   "pytest-cov>=7.1.0",
-  "ruff>=0.15.12",
+  "ruff>=0.15.16",
 ]
 
 [tool.coverage.report]
