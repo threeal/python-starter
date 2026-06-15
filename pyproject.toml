@@ -29,7 +29,7 @@ build-backend = "hatchling.build"
 [dependency-groups]
 dev = [
   "lefthook>=2.1.9",
-  "pytest>=8.4.2",
+  "pytest>=9.1.0",
   "pytest-cov>=7.1.0",
   "ruff>=0.15.16",
 ]
