@@ -31,7 +31,7 @@ dev = [
   "lefthook>=2.1.10",
   "pytest>=9.1.1",
   "pytest-cov>=7.1.0",
-  "ruff>=0.15.21",
+  "ruff>=0.16.1",
 ]
 
 [tool.coverage.report]
@@ -46,7 +46,7 @@ include = ["src"]
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["COM812", "D203", "D213"]
+ignore = ["COM812", "CPY001", "D203", "D213"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "D"]
