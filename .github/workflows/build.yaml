@@ -19,7 +19,7 @@ jobs:
         run: uv sync --locked
 
       - name: Check Formatting
-        uses: dprint/check@v2.3
+        uses: dprint/check@v2.4
 
       - name: Check Lint
         run: uv run ruff check
