@@ -36,10 +36,10 @@ For more information on uv, including adding dependencies or running tools, refe
 
 #### Set Up Git Hooks
 
-This template uses [Lefthook](https://lefthook.dev/) to manage Git hooks, especially for the pre-commit hook. Lefthook will be installed as a development dependency by the package manager, and the pre-commit hook can be installed with:
+This template uses [Lefthook](https://lefthook.dev/) to manage Git hooks, especially for the pre-commit hook. If Lefthook is not installed, follow [this guide](https://lefthook.dev/installation/) to install it. Then, set up the pre-commit hook with:
 
 ```sh
-uv run lefthook install
+lefthook install
 ```
 
 After that, each commit to the project will trigger a hook that checks for formatting and linting. This ensures that committed files follow the specified rules.
