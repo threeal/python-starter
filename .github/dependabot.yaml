@@ -4,15 +4,9 @@ updates:
     directory: /
     schedule:
       interval: daily
-    commit-message:
-      prefix: chore
-    labels: []
 
   - package-ecosystem: uv
     directory: /
     schedule:
       interval: daily
-    commit-message:
-      prefix: chore
-    labels: []
     versioning-strategy: increase
