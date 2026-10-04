@@ -12,17 +12,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
 
+      - name: Install dprint
+        run: |
+          curl -fsSL https://dprint.dev/install.sh | sh
+          echo "$HOME/.dprint/bin" >> $GITHUB_PATH
+
+      - name: Setup Lefthook
+        uses: threeal/setup-lefthook-action@v1.0.0
+
       - name: Setup uv
         uses: astral-sh/setup-uv@v10.2.0
 
-      - name: Install dependencies
-        run: uv sync --locked
-
-      - name: Check formatting
-        uses: dprint/check@v2.5
-
-      - name: Check lint
-        run: uv run ruff check
+      - name: Check pre-commit hook
+        run: lefthook run pre-commit --all-files
 
       - name: Test
         run: uv run pytest -v --cov
