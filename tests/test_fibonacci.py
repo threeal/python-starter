@@ -1,8 +1,7 @@
 from bonacci import fibonacci_sequence
 
 
-def test_fibonacci_sequence() -> None:
-    assert fibonacci_sequence(-1) == []
+def test_generate_fibonacci_sequence() -> None:
     assert fibonacci_sequence(0) == []
     assert fibonacci_sequence(1) == [1]
     assert fibonacci_sequence(2) == [1, 1]

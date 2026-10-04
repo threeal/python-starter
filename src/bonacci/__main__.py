@@ -1,4 +1,8 @@
-"""Example main module for the CLI application."""
+"""A command-line interface for generating a Fibonacci sequence.
+
+This is the placeholder CLI of a project template; remove it along with the
+`bonacci` entry in `[project.scripts]` if your project doesn't need one.
+"""
 
 import argparse
 import sys

@@ -1,5 +1,5 @@
-"""Example Python package for generating Fibonacci sequences."""
+"""Example Python package for generating a Fibonacci sequence."""
 
-from .sequence import fibonacci_sequence
+from .fibonacci import fibonacci_sequence
 
 __all__ = ["fibonacci_sequence"]
