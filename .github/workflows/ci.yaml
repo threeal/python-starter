@@ -1,12 +1,12 @@
-name: Build
+name: CI
 on:
   workflow_dispatch:
   pull_request:
   push:
     branches: [main]
 jobs:
-  build-package:
-    name: Build Package
+  build:
+    name: Build
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
@@ -15,17 +15,17 @@ jobs:
       - name: Setup uv
         uses: astral-sh/setup-uv@v10.2.0
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: uv sync --locked
 
-      - name: Check Formatting
+      - name: Check formatting
         uses: dprint/check@v2.5
 
-      - name: Check Lint
+      - name: Check lint
         run: uv run ruff check
 
-      - name: Test Package
+      - name: Test
         run: uv run pytest -v --cov
 
-      - name: Build Package
+      - name: Build
         run: uv build
