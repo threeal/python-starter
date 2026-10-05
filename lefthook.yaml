@@ -6,8 +6,11 @@ pre-commit:
     - name: install dependencies
       run: uv sync
 
-    - name: fix formatting
-      run: dprint fmt
-
     - name: fix lint
       run: uv run ruff check --fix
+
+    - name: fix python formatting
+      run: uv run ruff format
+
+    - name: fix formatting
+      run: dprint fmt
