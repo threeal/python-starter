@@ -36,10 +36,6 @@ dev = [
 
 [tool.coverage.report]
 fail_under = 100
-omit = ["__main__.py"]
-
-[tool.coverage.run]
-source = ["bonacci"]
 
 [tool.hatch.build.targets.sdist]
 include = ["src"]
