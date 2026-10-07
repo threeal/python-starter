@@ -1,7 +1,9 @@
 .*
-!.git*
+!.github/
+!.gitattributes
+!.gitignore
 !.python-version
 
+__pycache__/
+dist/
 *.egg-info
-__pycache__
-dist
