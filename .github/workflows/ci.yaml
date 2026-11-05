@@ -21,7 +21,7 @@ jobs:
           tool: dprint
 
       - name: Setup Lefthook
-        uses: threeal/setup-lefthook-action@v1.0.0
+        uses: threeal/setup-lefthook-action@v1.1.0
 
       - name: Check pre-commit hook
         run: lefthook run pre-commit --all-files
