@@ -12,6 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
 
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v10.3.2
+
       - name: Install dprint
         run: |
           curl -fsSL https://dprint.dev/install.sh | sh
@@ -19,9 +22,6 @@ jobs:
 
       - name: Setup Lefthook
         uses: threeal/setup-lefthook-action@v1.0.0
-
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v10.3.2
 
       - name: Check pre-commit hook
         run: lefthook run pre-commit --all-files
