@@ -16,9 +16,9 @@ jobs:
         uses: astral-sh/setup-uv@v10.3.2
 
       - name: Install dprint
-        run: |
-          curl -fsSL https://dprint.dev/install.sh | sh
-          echo "$HOME/.dprint/bin" >> $GITHUB_PATH
+        uses: taiki-e/install-action@v2
+        with:
+          tool: dprint
 
       - name: Setup Lefthook
         uses: threeal/setup-lefthook-action@v1.0.0
