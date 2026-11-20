@@ -12,5 +12,5 @@ A minimal Python library and CLI starter template. Its only application code is 
 
 - `lefthook run pre-commit` skips every job when nothing is staged, even ones that ignore the staged file list — pass `--all-files` to run it outside an actual commit.
 - The pre-commit hook fixes files in place, and the run fails if any file changes. Report that failure and leave the fixes for the user to review and re-stage before committing again.
-- The test command is `uv run pytest --cov`, not `uv run pytest` — only `--cov` applies the 100% coverage threshold from `pyproject.toml`.
+- `uv run pytest` doesn't check coverage — only `uv run pytest --cov` applies the 100% threshold from `pyproject.toml`.
 - `.gitignore` ignores every dotfile and dotdir (`.*`) — a new one needs an explicit `!` exception there or it silently won't be tracked.
