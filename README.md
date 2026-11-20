@@ -24,24 +24,24 @@ lefthook install
 
 Replace or extend the template files to fit your project:
 
-- **`src/bonacci/`** — Rename to your package name, matching the package name in `pyproject.toml`.
-- **`src/bonacci/__init__.py`** — Update the public API exports to match your library.
-- **`src/bonacci/__main__.py`** — Replace or remove the placeholder CLI. Remove this file and the `[project.scripts]` entry in `pyproject.toml` if your project doesn't need a CLI.
-- **`src/bonacci/fibonacci.py`** — Replace with your own library logic, along with its tests in `tests/test_fibonacci.py`.
+- **`src/`** — Replace the placeholder library and CLI with your own code.
+- **`tests/`** — Replace the placeholder tests with your own.
 - **`CLAUDE.md`** — Replace with guidance specific to your project.
 - **`LICENSE`** — Replace with your preferred license, or keep the [Unlicense](https://unlicense.org/).
 - **`pyproject.toml`** — Update the package name, description, version, authors, and other metadata.
 - **`README.md`** — Replace with a description of your project.
 
+If your project doesn't need a CLI, remove `__main__.py` and the `[project.scripts]` entry in `pyproject.toml`.
+
 ## Development
 
-Write code in `src/`. Test files live in `tests/` as `test_*.py`. Run the test suite with:
+Run the tests with coverage through pytest:
 
 ```sh
 uv run pytest --cov
 ```
 
-The project enforces 100% code coverage on every run.
+The project enforces 100% code coverage, counting only modules the tests import.
 
 Each `git commit` runs the pre-commit hook registered during setup, which checks your changes and fixes what it can in place. If it fails, fix any reported issues, re-stage the changed files, and commit again.
 
